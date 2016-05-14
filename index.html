@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>One Page Wonder - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/one-page-wonder.css" rel="stylesheet">
+	
+	<!-- Vendor: Angular, followed by our custom Javascripts -->
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+	function resizeIframe(obj) {
+		obj.style.height = '500px';//obj.contentWindow.document.body.scrollHeight + 'px';
+	  }
+	</script> 
+	
+
+</head>
+
+<body ng-app="MerchantApp">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Shoe Shop</a>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+	
+
+    <!-- Page Content -->
+    <div class="container">
+	
+	
+        <hr class="featurette-divider">
+	
+		<div class="row">
+			<div class="col-lg-12">
+				<h1><strong>KES 5,780</strong></h1>
+			</div>
+		</div>
+
+        <hr class="featurette-divider">
+		<!-- Button trigger modal -->
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+		  Pay via QuickPay
+		</button>
+
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Process Payment</h4>
+			  </div>
+			  <div class="modal-body" style="height: 500px">
+					<iframe  class="embed-responsive-item col-sm-11 fill" onload="resizeIframe(this)" ng-controller="MerchantController" ng-src="{{QPUrl}}">
+						Could not connect to QuickPay
+					</iframe> 
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+        <hr class="featurette-divider">
+		
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+</body>
+
+</html>
